@@ -15,6 +15,9 @@ let ans="";
 while(n!=0){
    
    for(let i in romanMap){
+	let[symbol,value]=romanMap[i];
+	   let value=romanMap[i][0];
+	   let num=romanMap[i][1];
 
        let value=romanMap[i][0];
        let num=romanMap[i][1];
@@ -25,14 +28,12 @@ while(n!=0){
            ans=ans+value;
             n=n-num;
              break;
-            
+		}
+   }
 }
-        
-
-
-
+	return ans;
 }
 
-
+module.export=convertToRoman
 
 }
